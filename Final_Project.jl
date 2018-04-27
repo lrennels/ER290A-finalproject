@@ -1,8 +1,8 @@
 ## Final Project ##
-
+cd("/Users/nicholasdepsky/Dropbox/Berkeley_tings/Spring 2018/ER 290A/ER290A-finalproject")
+using Queryverse
 ####------------------------------ DEFINE SUPPLY --------------------------------####
-inflow = open("NYuba_cfs.csv")
-inflow2 = 20
+inflow = create_supply_node("NYuba_Inflow_Month.csv", name = "inflow1", supply_units = "CFS")
 ####-----------------------------------------------------------------------------####
 
 ####------------------------------ DEFINE INFRASTRUCTURE ------------------------####
@@ -13,5 +13,3 @@ inflow2 = 20
 
 ####-----------------------------------------------------------------------------####
 
-city_pop = 1e4 # number of people in city
-city_dem_cap = # per capita city demand

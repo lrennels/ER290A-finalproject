@@ -1,0 +1,31 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+setwd("/Users/nicholasdepsky/Dropbox/Berkeley_tings/Spring 2018/ER 290A/ER290A-finalproject")
+df <- read.csv("NYuba_GoodYears_CFS.csv", check.names = F)
+
+date_fix <- function(x, year=1950){
+  d <- mdy(x)
+  m <- year(d) %% 100
+  year(d) <- ifelse(m > year %% 100, 1900+m, 2000+m)
+  as.Date(d)
+}
+
+df$Day <- date_fix(df$Day)
+day_df <- aggregate(CFS ~ Day, df, mean)
+month_df <- day_df %>% mutate(ymd = paste(month(Day),"01",year(Day),sep = "/"))
+month_df$ymd <- date_fix(month_df$ymd)
+month_df <- aggregate(CFS ~ ymd, month_df, mean)
+```
+
+```{r}
+ggplot(day_df, aes(x = Day, y = CFS)) + geom_line() + ggtitle("Daily Average Streamflow [CFS]") + labs(x = "Date")
+```
+
+```{r}
+ggplot(month_df, aes(x = ymd, y = CFS)) + geom_line() + ggtitle("Monthly Average Streamflow [CFS]") + labs(x = "Date")
+```
+
