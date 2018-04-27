@@ -27,7 +27,8 @@ end
 ##  output:  the node dictionary
 function create_reservoir(filepath::String; name::String = "default_name", 
     storage_capacity::Float64 = -999.,
-    top_of_conservation::Array = fill(-999.,12));
-    
-    return Dict("name" => name, "storage_capacity" => storage_capacity, "top_of_conservation" => top_of_conservation);
+    top_of_conservation::Array = fill(-999.,12),
+    storage_units::String = "storage_units");
+
+    return Dict("name" => name, "storage_capacity" => storage_capacity, "top_of_conservation" => top_of_conservation, "storage_units" => storage_units);
 end
