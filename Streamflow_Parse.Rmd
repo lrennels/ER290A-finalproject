@@ -5,8 +5,11 @@ output: html_notebook
 
 ```{r}
 setwd("/Users/nicholasdepsky/Dropbox/Berkeley_tings/Spring 2018/ER 290A/ER290A-finalproject")
-df <- read.csv("NYuba_GoodYears_CFS.csv", check.names = F)
-
+df <- read.csv("NYuba_GoodYears_CFS_raw.csv", check.names = F)
+library(lubridate)
+library(dplyr)
+library(ggplot2)
+library(magrittr)
 date_fix <- function(x, year=1950){
   d <- mdy(x)
   m <- year(d) %% 100
@@ -15,10 +18,13 @@ date_fix <- function(x, year=1950){
 }
 
 df$Day <- date_fix(df$Day)
-day_df <- aggregate(CFS ~ Day, df, mean)
-month_df <- day_df %>% mutate(ymd = paste(month(Day),"01",year(Day),sep = "/"))
+day_df <- aggregate(CFS ~ Day, df, mean) %>% set_colnames(c("Date", "CFS"))
+month_df <- day_df %>% mutate(ymd = paste(month(Date),"01",year(Date),sep = "/"))
 month_df$ymd <- date_fix(month_df$ymd)
-month_df <- aggregate(CFS ~ ymd, month_df, mean)
+month_df <- aggregate(CFS ~ ymd, month_df, mean) %>% set_colnames(c("Date", "CFS"))
+
+write.csv(day_df, file = "NYuba_Inflow_Day.csv", row.names = F)
+write.csv(month_df, file = "NYuba_Inflow_Month3.csv", row.names = F)
 ```
 
 ```{r}
