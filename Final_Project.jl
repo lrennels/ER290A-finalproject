@@ -1,4 +1,8 @@
 ## Final Project ##
+
+#cd("/Users/nicholasdepsky/Dropbox/Berkeley_tings/Spring 2018/ER 290A/ER290A-finalproject")
+cd("/Users/lisarennels/Documents/UC Berkeley ERG/ENERES 290A/Final Project/ER290A-finalproject")
+
 include("helper_functions.jl");
 
 ####------------------------------ DEFINE SUPPLY ---------------------------####
@@ -12,16 +16,12 @@ include("DefineDemand.jl")
 ####---------------------------DEFINE INFRASTRUCTURE -----------------------####
 include("DefineInfrastructure.jl")
 
-####------------------------------------------------------------------------####
-
 ####---------------------------------RUN DRIP-------------------------------####
 include("DRIP_deterministic.jl")
 
-####------------------------------------------------------------------------####
-
 ####---------------------------------RUN DRIP-------------------------------####
-const years = collect(1990:2017)
-results = DRIP_deterministic(demand_nodes, supply_nodes, reservoir_nodes, years);
+const numyears = length(collect(1990:2017))
+results = DRIP_deterministic(demand_nodes, supply_nodes, reservoir_nodes, numyears);
 
 ####------------------------------------------------------------------------####
 
