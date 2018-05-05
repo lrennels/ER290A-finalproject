@@ -1,5 +1,5 @@
-## Define reservoirs:  This file adds the various demand nodes to the demand_node
-## list, which is ordered randomly.  Demands are assumed to be monthly values.
+## Define reservoirs:  This file adds the various demand nodes to the reservoir_nodes
+## list, which is ordered randomly.  Units are assumed to be monthly values.
 
 reservoir_nodes = []
 

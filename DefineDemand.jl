@@ -11,7 +11,8 @@ push!(demand_nodes, create_demand_node(
     rate = 10., 
     size_units = "people", 
     demand_units = "m3", 
-    priority = 1)
+    priority = 1, 
+    ID = 1)
 )
 ###---------------------------###
 
@@ -19,10 +20,12 @@ push!(demand_nodes, create_demand_node(
 push!(demand_nodes, create_demand_node(
     node_type = "farm", 
     name = "Anaya's Farm", 
-    size = 300_000., rate = 5., 
+    size = 300_000., 
+    rate = 5., 
     size_units = "ha", 
     demand_units = "m3", 
-    priority = 2)
+    priority = 2, 
+    ID = 2)
 )
 ###---------------------------###
 
@@ -34,7 +37,8 @@ push!(demand_nodes, create_demand_node(
     rate = 100_000., 
     size_units = "NA", 
     demand_units = "m3", 
-    priority = 3)
+    priority = 3, 
+    ID = 3)
 )
 ###---------------------------###
 
@@ -46,6 +50,7 @@ push!(demand_nodes, create_demand_node(
     rate = 40_000., 
     size_units = "NA", 
     demand_units = "kWh", 
-    priority = 2)
+    priority = 2
+    ID = 4)
 )
 ###---------------------------###
