@@ -11,7 +11,8 @@ push!(demand_nodes, create_demand_node(
     rate = 10., 
     size_units = "people", 
     demand_units = "m3", 
-    priority = 1)
+    priority = 1, 
+    ID = 1)
 )
 ###---------------------------###
 
@@ -19,26 +20,16 @@ push!(demand_nodes, create_demand_node(
 push!(demand_nodes, create_demand_node(
     node_type = "farm", 
     name = "Anaya's Farm", 
-    size = 300_000., rate = 5., 
+    size = 300_000., 
+    rate = 5., 
     size_units = "ha", 
     demand_units = "m3", 
-    priority = 2)
+    priority = 2, 
+    ID = 2)
 )
 ###---------------------------###
 
 ###----- Create Demand 3 -----###
-push!(demand_nodes, create_demand_node(
-    node_type = "IFR", 
-    name = "Trout", 
-    size = 1., 
-    rate = 100_000., 
-    size_units = "NA", 
-    demand_units = "m3", 
-    priority = 3)
-)
-###---------------------------###
-
-###----- Create Demand 4 -----###
 push!(demand_nodes, create_demand_node(
     node_type = "hydropower", 
     name = "ERG", 
@@ -46,6 +37,20 @@ push!(demand_nodes, create_demand_node(
     rate = 40_000., 
     size_units = "NA", 
     demand_units = "kWh", 
-    priority = 2)
+    priority = 2,
+    ID = 3)
+)
+###---------------------------###
+
+###----- Create Demand 4 -----###
+push!(demand_nodes, create_demand_node(
+    node_type = "IFR", 
+    name = "Trout", 
+    size = 1., 
+    rate = 100_000., 
+    size_units = "NA", 
+    demand_units = "m3", 
+    priority = 3, 
+    ID = 4)
 )
 ###---------------------------###
