@@ -1,4 +1,11 @@
 ## Final Project ##
+
+####------- DEFINE DATE PERIOD -------####
+year_start = 2018
+year_stop = 1990
+tstep = 12 # Options: 12 - Monthly Only for now
+#####---------------------------------####
+
 include("helper_functions.jl");
 
 ####------------------------------ DEFINE SUPPLY ---------------------------####
