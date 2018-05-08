@@ -6,20 +6,21 @@
 using Queryverse
 
 function create_demand_node(;node_type::String = "default_type", name::String = "default_name", 
-    size::Float64= -999., rate::Float64 = -999., size_units::String = "default_units", 
-    demand_units::String = "demand_units", priority::Int64 = 999, ID::Int64 = 999);
+    size::Float64= -999., rate::Array{} = [], size_units::String = "default_units", 
+    demand_units::String = "demand_units", priority::Int64 = 999, ID::Int64 = 999, 
+    months::Array{} = []);
 
     return Dict("name" => name, "size" => size, "rate" => rate,    
     "size_units" => size_units, "demand_units" => demand_units, "priority" => priority, 
-    "ID" => ID); 
+    "ID" => ID, "months" => months); 
 end
 
-##  function to add a supply node to the list of suppl nodes
+##  function to add a supply node to the list of supply nodes
 ##
 ##  arguments: name, size, rate, size_units, rate_units
 ##  output:  the node dictionary
 function create_supply_node(;filepath::String = "filepath", name::String = "default_name", 
-    supply_units::String = "supply_units", ID::Int64 = 999)
+    supply_units::String = "supply_units", ID::Int64 = 999s)
 
     inflow = DataFrame(load(filepath))
     return Dict("name" => name, "inflow" => inflow, "supply_units" => supply_units, 
@@ -57,6 +58,40 @@ splot = function()
             "x": {"field": "Date","type": "temporal"},
             "y": {"field": "CFS","type": "Quantitative"},
             "color": {"field": "ID", "type": "nominal"},
+            "opacity":{"value": 0.8}
+        },
+        "width": 500,
+        "height": 300
+    }
+    """
+end
+
+
+#Demand Plot (demand_nodes)
+dplot = function()
+    d_demand = deepcopy(demand_nodes[1]["rate"] * demand_nodes[1]["size"])
+    d_months = deepcopy(demand_nodes[1]["months"])
+    d_name = fill(deepcopy(demand_nodes[1]["name"]), length(d_months));
+
+    dem = DataFrame(Demand_in_CFS = d_demand, Months = d_months, Node = d_name);
+    if length(demand_nodes) > 1
+        for d = 2:length(demand_nodes)
+            d_demand = deepcopy(demand_nodes[d]["rate"] * demand_nodes[d]["size"])
+            d_months = deepcopy(demand_nodes[d]["months"])
+            d_name = fill(deepcopy(demand_nodes[d]["name"]), length(d_months));
+            append!(dem, DataFrame(Demand_in_CFS= d_demand, Months = d_months, Node = d_name));
+        end
+    end
+
+    dem |> vl"""
+    {
+        "title": "Demand",
+        "mark": "bar",
+        "background": "white",
+        "encoding": {
+            "x": {"field": "Demand_in_CFS", "type": "quantitative"},
+            "y": {"field":"Months", "type": "ordinal"},
+            "color": {"field": "Node", "type": "nominal"},
             "opacity":{"value": 0.8}
         },
         "width": 500,
