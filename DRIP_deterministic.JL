@@ -20,14 +20,21 @@ function DRIP_deterministic(demand_nodes::Array{}, supply_nodes::Array{},
     #track the total current supply
     current_supply= 0.
 
-    #track how much of each demand node gets filled
-    fill = zeros(length(demand_nodes))
+    #track how much of each demand node gets demand_frac_filleded
+    demand_frac_filled = zeros(length(demand_nodes))
 
-    for m = 1:length(years) * 12
+    for m = 1:numyears * 12
 
-        #add the monthly supply to the current_supply
+        s_index = m
+        m_index = m%12 
+        if m_index == 0
+            m_index = 12
+        end
+
+        #add the monthly supply to the current_supply, assuming the supply is in
+        #cubic feet per second
         for node = 1:length(supply_nodes)
-            current_supply += supply_nodes[node]["inflow"][:CFS][m]
+            current_supply += supply_nodes[node]["inflow"][:CFS][s_index] * 60*60*24*modays[m_index]
         end
 
         #loop over the demand
@@ -45,7 +52,7 @@ function DRIP_deterministic(demand_nodes::Array{}, supply_nodes::Array{},
             total_demand = 0.
             IDs = []
             for node = 1:length(current_set)
-                total_demand += current_set[node]["size"]
+                total_demand += current_set[node]["size"] * current_set[node]["rate"][m_index]
                 push!(IDs, current_set[node]["ID"])
             end
 
@@ -54,16 +61,16 @@ function DRIP_deterministic(demand_nodes::Array{}, supply_nodes::Array{},
             #care of 100%, and move on
             if current_supply >= total_demand
                 current_supply -= total_demand
-                fill[priority_demand_nodes[p][node]["ID"]] = 1
+                demand_frac_filled[IDs] = 1
 
             #if there is not enough supply, allocate it equally between these 
             #nodes, mark these nodes as taken care of x%, and break out of loop
             else
-                fill[IDs] = current_supply / total_demand
+                demand_frac_filled[IDs] = current_supply / total_demand
                 current_supply = 0.
                 
             end
         end
     end
-    return fill
+    return demand_frac_filled
 end
