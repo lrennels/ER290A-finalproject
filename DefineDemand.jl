@@ -7,14 +7,14 @@ demand_nodes = []
 push!(demand_nodes, create_demand_node(
     months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept",
     "Oct", "Nov", "Dec" ],
-    node_type = "city", 
+    demand_type = "city", 
     name = "City: Berkeley", 
-    size = 150_000.,
-    rate =  10e2 * [5., 5. , 5., 5., 5., 5., 5., 5., 5., 5., 5., 5.],
+    size = 400_000.,
+    rate =  10e2 * [3.,3.,3.,3.,3.,3.,3.,3.,3.,3.,3.,3.],
     size_units = "people", 
-    demand_units = "CFS", 
+    demand_units = "MM3", 
     priority = 1, 
-    ID = 1)
+    Loc = 4)
 )
 ###---------------------------###
 
@@ -22,14 +22,14 @@ push!(demand_nodes, create_demand_node(
 push!(demand_nodes, create_demand_node(
     months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept",
     "Oct", "Nov", "Dec" ],
-    node_type = "farm", 
+    demand_type = "farm", 
     name = "Farm: Anaya's Farm", 
-    size = 300_000., 
-    rate = 10e2 * [5., 6. , 7., 8., 9., 10., 10., 9., 8., 7., 6., 5.], 
-    size_units = "ha", 
-    demand_units = "CFS", 
-    priority = 2, 
-    ID = 2)
+    size = 100_000., 
+    rate = 10e3 * [2., 2., 3., 5., 7., 8., 10., 8.5, 6., 4., 2.5, 2.], 
+    size_units = "km2", 
+    demand_units = "MM3", 
+    priority = 1, 
+    Loc = 5)
 )
 ###---------------------------###
 
@@ -37,14 +37,14 @@ push!(demand_nodes, create_demand_node(
 push!(demand_nodes, create_demand_node(
     months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept",
     "Oct", "Nov", "Dec" ],
-    node_type = "hydropower", 
+    demand_type = "hydropower", 
     name = "hydropower: ERG", 
     size = 1., 
-    rate =  10e7 * [10., 11. , 12., 11., 12., 13., 13., 12., 11., 10., 9., 9.], 
+    rate =  0 * 10e7 * [0., 0. , 0., 0., 0., 13., 13., 12., 11., 10., 9., 9.], 
     size_units = "NA", 
-    demand_units = "CFS", 
+    demand_units = "MWH", 
     priority = 2,
-    ID = 3)
+    Loc = 3)
 )
 ###---------------------------###
 
@@ -52,13 +52,37 @@ push!(demand_nodes, create_demand_node(
 push!(demand_nodes, create_demand_node(
     months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept",
     "Oct", "Nov", "Dec" ],
-    node_type = "IFR", 
+    demand_type = "IFR", 
     name = "IFS: Trout", 
     size = 1., 
-    rate =  10e7 * fill(6., 12), 
+    rate = fill(0.5, 12), 
     size_units = "NA", 
-    demand_units = "CFS", 
-    priority = 3, 
-    ID = 4)
+    demand_units = "CMS", 
+    priority = 1, 
+    Loc = 8)
 )
 ###---------------------------###
+
+# Create Data Frame of All Demands
+function ddf(demand_nodes, start_year, stop_year)
+    nyears = stop_year - start_year + 1
+    dates = Date.(sort(repmat(years,12)),repmat(1:12,nyears))
+    out=[]
+    for i in 1:length(demand_nodes)
+        if (i == 1)
+            out = DataFrame(
+                Date = copy(dates), 
+                Name = demand_nodes[i]["name"],
+                Demand = repmat(deepcopy(demand_nodes[i]["rate"]*demand_nodes[i]["size"]),nyears), Units = demand_nodes[i]["demand_units"],
+                Loc = demand_nodes[i]["Loc"])
+        else
+            add = DataFrame(
+                Date = copy(dates), 
+                Name = demand_nodes[i]["name"],
+                Demand = repmat(deepcopy(demand_nodes[i]["rate"]*demand_nodes[i]["size"]),nyears), Units = demand_nodes[i]["demand_units"],
+                Loc = demand_nodes[i]["Loc"])
+            out = append!(out,add)
+        end
+    end
+    return out
+end
