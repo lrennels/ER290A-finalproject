@@ -27,48 +27,136 @@ example.
 
 # User Guide and Example
 
-## Setup
+#### 1. Setup
 
 In order to use DRIP, you will first want to include the helper functions as
 follows:
 
-```{julia; eval=false}
+```{julia; eval=true}
 using Weave
-include(helper_functions.jl)
+include("helper_functions.jl")
+```
+Next, set up some basic date information:
+
+```{julia; eval=true}
+const start_year = 1990
+const stop_year = 2017
+const tstep = 12 
+const modays = [31, 28, 31, 30 ,31, 30, 31, 31, 30 ,31, 30 , 31];
 ```
 
-## Define Demand
+#### 2. Define Demand
 
 The `DefineDemand.jl` script allows a user to define specific **demand** nodes 
 of which can be of several categories including agricultural, municipal, industrial, 
-or instream flow requirements (IFRs).  Each demand nodes has several metadata
+and instream flow requirements (IFRs).  Each demand nodes has several metadata
 requirements including
 
-- months - a list of months (*12 by 1 array of strings*)
-- node_type - type of node (*string*)
-- name - name of the node (*string*)
+- months - a list of months (*12 by 1 array of Strings*)
+- node_type - type of node (*String*)
+- name - name of the node (*String*)
 - size - size of the node (*Float64*)
-- rate - monthly rate of flow through node (*12 by 1 array of FLoat64*)  
-- size_units - units of size variable (*string*)
-- demand_units = units of rate variable (*string*)
-- priority - demand priority (*Int*)
-- loc - location (or position) in list of all nodes (*Int*)
+- rate - monthly rate of flow through node (*12 by 1 array of Float64*)  
+- size_units - units of size variable (*String*)
+- demand_units = units of rate variable (*String*)
+- priority - demand priority (*Int64*)
+- Loc- location (or position) in list of all nodes (*Int64*)
 
-Once all demand nodes are defined, you can create the structures and 
-graphically view the information as follows:
+Once all demand nodes are defined, you can create the structures with an 
+`include` statement, convert them to a DataFrame structure using the `rdf`
+function, and view graphically using `dplot` as follows:
+
 
 ```{julia; eval=true}
 include("DefineDemand.jl")
+demand = ddf(demand_nodes, start_year, stop_year)
 dplot()
 ```
 
+*The `include` call will return a list of dictionaries, one for each node, 
+and the `rdf` call will convert this data structure into a `DataFrame` for use
+by the main DRIP script.*
 
-## Define Supply 
+#### 3. Define Supply 
 
-## Define Infrastructure
+The `DefineSupply.jl` script allows a user to define specific **supply** nodes 
+of which can be of several categories including tributary inflow, catchment inflows,
+return flows, and groundwater.  Each supply nodes has several metadata
+requirements including
 
-## Run DRIP
+- filepath - the file path of th e.csv file containing flow information (*String*)
+- name - name of supply node (*String*)
+- supply_units - units of rate variable (*String*)
+- Loc- location (or position) in list of all nodes (*Int64*)
+
+Note that supply information is assumed to be stored in a .csv file in the 
+format of month (Date format) in the first column and Supply (number format)
+in the second column.  Example files can be found in this folder eg. 
+*NYuba_Inflow_Month*.
+
+Once all supply nodes are defined, you can create the structures with an 
+`include` statement, convert them to a DataFrame structure using the `rdf`
+function, and view graphically using `splot` as follows:
+
+```{julia; eval=true}
+include("DefineSupply.jl")
+supply = sdf(supply_nodes, start_year, stop_year)
+splot()
+```
+
+*The `include` call will return a list of dictionaries, one for each node, 
+and the `rdf` call will convert this data structure into a `DataFrame` for use
+by the main DRIP script.*
+
+#### 4. Define Infrastructure
+
+The `DefineInfrastructure.jl` script allows a user to define specific **infrastructure** 
+nodes, which as of now are simply reservoirs. Each infrastructure node has 
+several metadata requirements including
+
+- name - name of reservoir node (*String*)
+- storage_capacity -  capacity of reservoir (*Float64*)
+- init_storage - initial storage of reservoir (*Float64*)
+- top_of_conservation - (*12 by 1 array of Float64*)  
+- storage_units - units of storage (*String*)
+- Loc - location (or position) in list of all nodes (*Int64*)
+
+Note that supply information is assumed to be stored in a .csv file in the 
+format of month (Date format) in the first column and Supply (number format)
+in the second column.  Example files can be found in this folder eg. 
+*NYuba_Inflow_Month*.
+
+Once all reservoir nodes are defined, you can create the structures with an 
+`include` statement, convert them to a DataFrame structure using the `rdf`
+function, and view graphically using `rplot` as follows:
+
+```{julia; eval=true}
+include("DefineInfrastructure.jl")
+reservoirs = rdf(reservoir_nodes, start_year, stop_year);
+rplot(reservoirs)
+```
+
+*The `include` call will return a list of dictionaries, one for each node, 
+and the `rdf` call will convert this data structure into a `DataFrame` for use
+by the main DRIP script.*
+
+#### 5. Run DRIP
+
+Once you have set up the demand, supply, and reservoir nodes, you can run the
+main DRIP allocation routine!  This allocation script will run the allocation
+algorithm and return `results`, which is ... 
+
+```{julia; eval=true}
+include("DRIP_allocation_routine.jl")
+results = DRIP_allocation(demand, supply, reservoirs, 
+    (stop_year - start_year + 1));
+```
 
 # Comparison to WEAP
 
 # Future Work
+
+We hope to improve this work in the future with various enhancements such as:
+
+- include more complex optimization routines
+- add the possibility of shocks as opposed to determistic supply/demand, to more realistically represent weather variability, unexpected shifts in demand, etc.

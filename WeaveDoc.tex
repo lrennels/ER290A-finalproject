@@ -1,0 +1,180 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[a4paper,text={16.5cm,25.2cm},centering]{geometry}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{graphicx}
+\usepackage{microtype}
+\usepackage{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.2ex}
+\usepackage{minted}
+
+\usepackage{ifxetex,ifluatex}
+\newif\ifxetexorluatex
+\ifxetex
+  \xetexorluatextrue
+\else
+  \ifluatex
+    \xetexorluatextrue
+  \else
+    \xetexorluatexfalse
+  \fi
+\fi
+
+\hypersetup
+       {   pdfauthor = { Lisa Rennels and Nick Depsky },
+           pdftitle={ DRIP Water Resource Allocation Tool },
+           colorlinks=TRUE,
+           linkcolor=black,
+           citecolor=blue,
+           urlcolor=blue
+       }
+
+
+
+\title{ DRIP Water Resource Allocation Tool }
+
+
+
+\author{ Lisa Rennels and Nick Depsky }
+
+
+
+\date{ 11th May 2018 }
+
+
+%\ifxetexorluatex
+%  \usepackage{fontspec}
+%  \setmainfont{CMU Serif Roman}
+%  \setmonofont{CMU Typewriter Text}
+%  \usepackage{unicode-math}
+%  \setmathfont{Latin Modern Math}
+%\fi
+
+\begin{document}
+
+\maketitle
+
+\section{Intro}
+DRIP is a water resource allocation tool, modeled after \href{http://weap21.org}{WEAP} from the \href{https://www.sei.org/centres/us/}{Stockholm Environment Institute's U.S. Center}. WEAP can be summarized as follows:
+
+*WEAP ("Water Evaluation And Planning" system) is a user-friendly software tool  that takes an integrated approach to water resources planning.
+
+Freshwater management challenges are increasingly common. Allocation of limited  water resources between agricultural, municipal and environmental uses now  requires the full integration of supply, demand, water quality and ecological  considerations. The Water Evaluation and Planning system, or WEAP, aims to  incorporate these issues into a practical yet robust tool for integrated water  resources planning. WEAP is developed by the Stockholm Environment Institute's  U.S. Center.*
+
+The source code is available on \href{https://github.com/lrennels/ER290A-finalproject}{GitHub}  and includes several script files as well as input data files to run a small example.
+
+\section{User Guide and Example}
+\subsection{Setup}
+In order to use DRIP, you will first want to include the helper functions as follows:
+
+
+\begin{minted}[mathescape, fontsize=\small, xleftmargin=0.5em]{julia}
+
+using Weave
+include(helper_functions.jl)
+
+\end{minted}
+
+\begin{minted}[fontsize=\small, xleftmargin=0.5em, mathescape, frame = leftline]{text}
+Error: UndefVarError: helper_functions not defined
+\end{minted}
+
+
+Next, set up some basic date information:
+
+
+\begin{minted}[mathescape, fontsize=\small, xleftmargin=0.5em]{julia}
+
+const start_year = 1990
+const stop_year = 2017
+const tstep = 12 # Options: 12 - Monthly Only for now
+const modays = [31, 28, 31, 30 ,31, 30, 31, 31, 30 ,31, 30 , 31]
+
+\end{minted}
+
+\begin{minted}[fontsize=\small, xleftmargin=0.5em, mathescape, frame = leftline]{text}
+12-element Array{Int64,1}:
+ 31
+ 28
+ 31
+ 30
+ 31
+ 30
+ 31
+ 31
+ 30
+ 31
+ 30
+ 31
+\end{minted}
+
+
+\subsection{Define Demand}
+The \texttt{DefineDemand.jl} script allows a user to define specific \textbf{demand} nodes  of which can be of several categories including agricultural, municipal, industrial,  or instream flow requirements (IFRs).  Each demand nodes has several metadata requirements including
+
+\begin{itemize}
+\item months - a list of months (\emph{12 by 1 array of strings})
+
+
+\item node\_type - type of node (\emph{string})
+
+
+\item name - name of the node (\emph{string})
+
+
+\item size - size of the node (\emph{Float64})
+
+
+\item rate - monthly rate of flow through node (\emph{12 by 1 array of FLoat64})  
+
+
+\item size\_units - units of size variable (\emph{string})
+
+
+\item demand\_units = units of rate variable (\emph{string})
+
+
+\item priority - demand priority (\emph{Int})
+
+
+\item loc - location (or position) in list of all nodes (\emph{Int})
+
+\end{itemize}
+Once all demand nodes are defined, you can create the structures and  graphically view the information as follows:
+
+
+\begin{minted}[mathescape, fontsize=\small, xleftmargin=0.5em]{julia}
+
+include("DefineDemand.jl")
+
+\end{minted}
+
+\begin{minted}[fontsize=\small, xleftmargin=0.5em, mathescape, frame = leftline]{text}
+Error: LoadError: [91mUndefVarError: create_demand_node not defined[39m
+while loading /Users/lisarennels/Documents/UC Berkeley ERG/ENERES 290A/Fina
+l Project/ER290A-finalproject/DefineDemand.jl, in expression starting on li
+ne 7
+\end{minted}
+
+
+\begin{minted}[mathescape, fontsize=\small, xleftmargin=0.5em]{julia}
+
+dplot()
+
+\end{minted}
+
+\begin{minted}[fontsize=\small, xleftmargin=0.5em, mathescape, frame = leftline]{text}
+Error: UndefVarError: dplot not defined
+\end{minted}
+
+
+\subsection{Define Supply}
+\subsection{Define Infrastructure}
+\subsection{Run DRIP}
+\section{Comparison to WEAP}
+\section{Future Work}
+
+
+\end{document}

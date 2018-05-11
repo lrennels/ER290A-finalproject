@@ -667,6 +667,181 @@ pre.hljl > span.hljl-gt { }
 <p>DRIP is a water resource allocation tool, modeled after <a href="http://weap21.org">WEAP</a> from the <a href="https://www.sei.org/centres/us/">Stockholm Environment Institute&#39;s U.S. Center</a>. WEAP can be summarized as follows:</p>
 <p>*WEAP &#40;&quot;Water Evaluation And Planning&quot; system&#41; is a user-friendly software tool  that takes an integrated approach to water resources planning.</p>
 <p>Freshwater management challenges are increasingly common. Allocation of limited  water resources between agricultural, municipal and environmental uses now  requires the full integration of supply, demand, water quality and ecological  considerations. The Water Evaluation and Planning system, or WEAP, aims to  incorporate these issues into a practical yet robust tool for integrated water  resources planning. WEAP is developed by the Stockholm Environment Institute&#39;s  U.S. Center.*</p>
+<p>The source code is available on <a href="https://github.com/lrennels/ER290A-finalproject">GitHub</a>  and includes several script files as well as input data files to run a small example.</p>
+<h1>User Guide and Example</h1>
+<h4>1. Setup</h4>
+<p>In order to use DRIP, you will first want to include the helper functions as follows:</p>
+
+
+<pre class='hljl'>
+<span class='hljl-k'>using</span><span class='hljl-t'> </span><span class='hljl-n'>Weave</span><span class='hljl-t'>
+</span><span class='hljl-nf'>include</span><span class='hljl-p'>(</span><span class='hljl-s'>&quot;helper_functions.jl&quot;</span><span class='hljl-p'>)</span>
+</pre>
+
+
+<pre class="julia-error">
+ERROR: LoadError: &#91;91mUndefVarError: @vl_str not defined&#91;39m
+while loading /Users/lisarennels/Documents/UC Berkeley ERG/ENERES 290A/Final Project/ER290A-finalproject/helper_functions.jl, in expression starting on line 58
+</pre>
+
+
+<p>Next, set up some basic date information:</p>
+
+
+<pre class='hljl'>
+<span class='hljl-kd'>const</span><span class='hljl-t'> </span><span class='hljl-n'>start_year</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-ni'>1990</span><span class='hljl-t'>
+</span><span class='hljl-kd'>const</span><span class='hljl-t'> </span><span class='hljl-n'>stop_year</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-ni'>2017</span><span class='hljl-t'>
+</span><span class='hljl-kd'>const</span><span class='hljl-t'> </span><span class='hljl-n'>tstep</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-ni'>12</span><span class='hljl-t'> 
+</span><span class='hljl-kd'>const</span><span class='hljl-t'> </span><span class='hljl-n'>modays</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-p'>[</span><span class='hljl-ni'>31</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>28</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>31</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>30</span><span class='hljl-t'> </span><span class='hljl-p'>,</span><span class='hljl-ni'>31</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>30</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>31</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>31</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>30</span><span class='hljl-t'> </span><span class='hljl-p'>,</span><span class='hljl-ni'>31</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>30</span><span class='hljl-t'> </span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>31</span><span class='hljl-p'>];</span>
+</pre>
+
+
+
+<h4>2. Define Demand</h4>
+<p>The <code>DefineDemand.jl</code> script allows a user to define specific <strong>demand</strong> nodes  of which can be of several categories including agricultural, municipal, industrial,  and instream flow requirements &#40;IFRs&#41;.  Each demand nodes has several metadata requirements including</p>
+<ul>
+<li><p>months - a list of months &#40;<em>12 by 1 array of Strings</em>&#41;</p>
+</li>
+<li><p>node_type - type of node &#40;<em>String</em>&#41;</p>
+</li>
+<li><p>name - name of the node &#40;<em>String</em>&#41;</p>
+</li>
+<li><p>size - size of the node &#40;<em>Float64</em>&#41;</p>
+</li>
+<li><p>rate - monthly rate of flow through node &#40;<em>12 by 1 array of Float64</em>&#41;  </p>
+</li>
+<li><p>size_units - units of size variable &#40;<em>String</em>&#41;</p>
+</li>
+<li><p>demand_units &#61; units of rate variable &#40;<em>String</em>&#41;</p>
+</li>
+<li><p>priority - demand priority &#40;<em>Int64</em>&#41;</p>
+</li>
+<li><p>Loc- location &#40;or position&#41; in list of all nodes &#40;<em>Int64</em>&#41;</p>
+</li>
+</ul>
+<p>Once all demand nodes are defined, you can create the structures with an  <code>include</code> statement, convert them to a DataFrame structure using the <code>rdf</code> function, and view graphically using <code>dplot</code> as follows:</p>
+
+
+<pre class='hljl'>
+<span class='hljl-nf'>include</span><span class='hljl-p'>(</span><span class='hljl-s'>&quot;DefineDemand.jl&quot;</span><span class='hljl-p'>)</span><span class='hljl-t'>
+</span><span class='hljl-n'>demand</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>ddf</span><span class='hljl-p'>(</span><span class='hljl-n'>demand_nodes</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>start_year</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>stop_year</span><span class='hljl-p'>)</span>
+</pre>
+
+
+<pre class="julia-error">
+ERROR: UndefVarError: years not defined
+</pre>
+
+
+
+<pre class='hljl'>
+<span class='hljl-nf'>dplot</span><span class='hljl-p'>()</span>
+</pre>
+
+
+<pre class="julia-error">
+ERROR: UndefVarError: dplot not defined
+</pre>
+
+
+<p><em>The <code>include</code> call will return a list of dictionaries, one for each node,  and the <code>rdf</code> call will convert this data structure into a <code>DataFrame</code> for use by the main DRIP script.</em></p>
+<h4>3. Define Supply</h4>
+<p>The <code>DefineSupply.jl</code> script allows a user to define specific <strong>supply</strong> nodes  of which can be of several categories including tributary inflow, catchment inflows, return flows, and groundwater.  Each supply nodes has several metadata requirements including</p>
+<ul>
+<li><p>filepath - the file path of th e.csv file containing flow information &#40;<em>String</em>&#41;</p>
+</li>
+<li><p>name - name of supply node &#40;<em>String</em>&#41;</p>
+</li>
+<li><p>supply_units - units of rate variable &#40;<em>String</em>&#41;</p>
+</li>
+<li><p>Loc- location &#40;or position&#41; in list of all nodes &#40;<em>Int64</em>&#41;</p>
+</li>
+</ul>
+<p>Note that supply information is assumed to be stored in a .csv file in the  format of month &#40;Date format&#41; in the first column and Supply &#40;number format&#41; in the second column.  Example files can be found in this folder eg.  <em>NYuba_Inflow_Month</em>.</p>
+<p>Once all supply nodes are defined, you can create the structures with an  <code>include</code> statement, convert them to a DataFrame structure using the <code>rdf</code> function, and view graphically using <code>splot</code> as follows:</p>
+
+
+<pre class='hljl'>
+<span class='hljl-nf'>include</span><span class='hljl-p'>(</span><span class='hljl-s'>&quot;DefineSupply.jl&quot;</span><span class='hljl-p'>)</span><span class='hljl-t'>
+</span><span class='hljl-n'>supply</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>sdf</span><span class='hljl-p'>(</span><span class='hljl-n'>supply_nodes</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>start_year</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>stop_year</span><span class='hljl-p'>)</span><span class='hljl-t'>
+</span><span class='hljl-nf'>splot</span><span class='hljl-p'>()</span>
+</pre>
+
+
+<pre class="julia-error">
+ERROR: UndefVarError: splot not defined
+</pre>
+
+
+<p><em>The <code>include</code> call will return a list of dictionaries, one for each node,  and the <code>rdf</code> call will convert this data structure into a <code>DataFrame</code> for use by the main DRIP script.</em></p>
+<h4>4. Define Infrastructure</h4>
+<p>The <code>DefineInfrastructure.jl</code> script allows a user to define specific <strong>infrastructure</strong>  nodes, which as of now are simply reservoirs. Each infrastructure node has  several metadata requirements including</p>
+<ul>
+<li><p>name - name of reservoir node &#40;<em>String</em>&#41;</p>
+</li>
+<li><p>storage_capacity -  capacity of reservoir &#40;<em>Float64</em>&#41;</p>
+</li>
+<li><p>init_storage - initial storage of reservoir &#40;<em>Float64</em>&#41;</p>
+</li>
+<li><p>top_of_conservation - &#40;<em>12 by 1 array of Float64</em>&#41;  </p>
+</li>
+<li><p>storage_units - units of storage &#40;<em>String</em>&#41;</p>
+</li>
+<li><p>Loc - location &#40;or position&#41; in list of all nodes &#40;<em>Int64</em>&#41;</p>
+</li>
+</ul>
+<p>Note that supply information is assumed to be stored in a .csv file in the  format of month &#40;Date format&#41; in the first column and Supply &#40;number format&#41; in the second column.  Example files can be found in this folder eg.  <em>NYuba_Inflow_Month</em>.</p>
+<p>Once all reservoir nodes are defined, you can create the structures with an  <code>include</code> statement, convert them to a DataFrame structure using the <code>rdf</code> function, and view graphically using <code>rplot</code> as follows:</p>
+
+
+<pre class='hljl'>
+<span class='hljl-nf'>include</span><span class='hljl-p'>(</span><span class='hljl-s'>&quot;DefineInfrastructure.jl&quot;</span><span class='hljl-p'>)</span><span class='hljl-t'>
+</span><span class='hljl-n'>reservoirs</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>rdf</span><span class='hljl-p'>(</span><span class='hljl-n'>reservoir_nodes</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>start_year</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>stop_year</span><span class='hljl-p'>);</span>
+</pre>
+
+
+<pre class="julia-error">
+ERROR: UndefVarError: years not defined
+</pre>
+
+
+
+<pre class='hljl'>
+<span class='hljl-nf'>rplot</span><span class='hljl-p'>(</span><span class='hljl-n'>reservoirs</span><span class='hljl-p'>)</span>
+</pre>
+
+
+<pre class="julia-error">
+ERROR: UndefVarError: rplot not defined
+</pre>
+
+
+<p><em>The <code>include</code> call will return a list of dictionaries, one for each node,  and the <code>rdf</code> call will convert this data structure into a <code>DataFrame</code> for use by the main DRIP script.</em></p>
+<h4>5. Run DRIP</h4>
+<p>Once you have set up the demand, supply, and reservoir nodes, you can run the main DRIP allocation routine&#33;  This allocation script will run the allocation algorithm and return <code>results</code>, which is ... </p>
+
+
+<pre class='hljl'>
+<span class='hljl-nf'>include</span><span class='hljl-p'>(</span><span class='hljl-s'>&quot;DRIP_allocation_routine.jl&quot;</span><span class='hljl-p'>)</span><span class='hljl-t'>
+</span><span class='hljl-n'>results</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>DRIP_allocation</span><span class='hljl-p'>(</span><span class='hljl-n'>demand</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>supply</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>reservoirs</span><span class='hljl-p'>,</span><span class='hljl-t'> 
+    </span><span class='hljl-p'>(</span><span class='hljl-n'>stop_year</span><span class='hljl-t'> </span><span class='hljl-oB'>-</span><span class='hljl-t'> </span><span class='hljl-n'>start_year</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-p'>));</span>
+</pre>
+
+
+<pre class="julia-error">
+ERROR: UndefVarError: demand not defined
+</pre>
+
+
+<h1>Comparison to WEAP</h1>
+<h1>Future Work</h1>
+<p>We hope to improve this work in the future with various enhancements such as:</p>
+<ul>
+<li><p>include more complex optimization routines</p>
+</li>
+<li><p>add the possibility of shocks as opposed to determistic supply/demand, to more realistically represent weather variability, unexpected shifts in demand, etc.</p>
+</li>
+</ul>
 
 
 
