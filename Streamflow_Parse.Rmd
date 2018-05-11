@@ -19,12 +19,15 @@ date_fix <- function(x, year=1950){
 
 df$Day <- date_fix(df$Day)
 day_df <- aggregate(CFS ~ Day, df, mean) %>% set_colnames(c("Date", "CFS"))
+day_df$CMS <- day_df$CFS*0.028316847
+day_df$CFS <- NULL
+
 month_df <- day_df %>% mutate(ymd = paste(month(Date),"01",year(Date),sep = "/"))
 month_df$ymd <- date_fix(month_df$ymd)
-month_df <- aggregate(CFS ~ ymd, month_df, mean) %>% set_colnames(c("Date", "CFS"))
+month_df <- aggregate(CMS ~ ymd, month_df, mean) %>% set_colnames(c("Date", "CMS"))
 
 write.csv(day_df, file = "NYuba_Inflow_Day.csv", row.names = F)
-write.csv(month_df, file = "NYuba_Inflow_Month3.csv", row.names = F)
+write.csv(month_df, file = "NYuba_Inflow_Month.csv", row.names = F)
 ```
 
 ```{r}

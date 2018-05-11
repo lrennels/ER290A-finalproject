@@ -6,30 +6,37 @@ supply_nodes = []
 ###----- Create Inflow 1 -----###
 push!(supply_nodes, create_supply_node(
     filepath = "NYuba_Inflow_Month.csv", 
-    name = "inflow1", 
-    supply_units = "CFS", 
-    ID = 1)
+    name = "Headflow", 
+    supply_units = "CMS", 
+    Loc = 1)
 )
-supply_nodes[1]["inflow"][:ID] = supply_nodes[1]["name"]
 ###---------------------------###
 
 ###----- Create Inflow 2 -----###
 push!(supply_nodes, create_supply_node(
     filepath = "NYuba_Inflow_Month2.csv", 
-    name = "inflow2", 
-    supply_units = "CFS", 
-    ID = 2)
+    name = "Tributary 1", 
+    supply_units = "CMS", 
+    Loc = 3)
 )
-supply_nodes[2]["inflow"][:ID] = supply_nodes[2]["name"]
 ###---------------------------###
 
-###----- Create Inflow 3 -----###
-push!(supply_nodes, create_supply_node(
-    filepath = "NYuba_Inflow_Month3.csv", 
-    name = "inflow3", 
-    supply_units = "CFS", 
-    ID = 3)
-)
-supply_nodes[3]["inflow"][:ID] = supply_nodes[3]["name"]
-###---------------------------###
+# Create Data Frame of All Supply Node Flows
+function sdf(supply_nodes, start_year, stop_year)
+    for s in 1:length(supply_nodes)
+        if (s == 1)
+            out = deepcopy(supply_nodes[1]["inflow"])
+            out[:Name] = supply_nodes[1]["name"]
+            out[:Loc] = supply_nodes[1]["Loc"]
+        else
+            add = deepcopy(supply_nodes[s]["inflow"])
+            add[:Name] = supply_nodes[s]["name"]
+            add[:Loc] = supply_nodes[s]["Loc"]
+            append!(out,add)
+        end
+    end
+    out = out[(Dates.year(out[:Date]).>=start_year)&(Dates.year(out[:Date]).<=stop_year),:]
+    return out
+end
+ 
 
