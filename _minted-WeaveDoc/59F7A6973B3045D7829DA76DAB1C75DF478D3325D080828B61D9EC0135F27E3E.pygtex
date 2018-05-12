@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{splot}\PYG{p}{(}\PYG{n}{supply}\PYG{p}{,}\PYG{l+m+mi}{1990}\PYG{p}{,}\PYG{l+m+mi}{2017}\PYG{p}{)}
+\end{Verbatim}

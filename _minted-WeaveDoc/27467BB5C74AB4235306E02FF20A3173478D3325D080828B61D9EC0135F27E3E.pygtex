@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k+kd}{const} \PYG{n}{start\PYGZus{}year} \PYG{o}{=} \PYG{l+m+mi}{1990}
+\PYG{k+kd}{const} \PYG{n}{stop\PYGZus{}year} \PYG{o}{=} \PYG{l+m+mi}{2017}
+\PYG{k+kd}{const} \PYG{n}{tstep} \PYG{o}{=} \PYG{l+m+mi}{12}
+\PYG{k+kd}{const} \PYG{n}{modays} \PYG{o}{=} \PYG{p}{[}\PYG{l+m+mi}{31}\PYG{p}{,} \PYG{l+m+mi}{28}\PYG{p}{,} \PYG{l+m+mi}{31}\PYG{p}{,} \PYG{l+m+mi}{30} \PYG{p}{,}\PYG{l+m+mi}{31}\PYG{p}{,} \PYG{l+m+mi}{30}\PYG{p}{,} \PYG{l+m+mi}{31}\PYG{p}{,} \PYG{l+m+mi}{31}\PYG{p}{,} \PYG{l+m+mi}{30} \PYG{p}{,}\PYG{l+m+mi}{31}\PYG{p}{,} \PYG{l+m+mi}{30} \PYG{p}{,} \PYG{l+m+mi}{31}\PYG{p}{];}
+\end{Verbatim}

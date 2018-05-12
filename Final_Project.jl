@@ -1,7 +1,7 @@
 ## Final Project ##
 ## Lisa Rennels and Nick Depsky
 ## ER 290A 
-
+cd("/Users/nicholasdepsky/Dropbox/Berkeley_tings/Spring 2018/ER 290A/ER290A-finalproject")
 ####-- DEFINE DATE PERIOD --------------------------------------------------####
 const start_year = 1990
 const stop_year = 2017

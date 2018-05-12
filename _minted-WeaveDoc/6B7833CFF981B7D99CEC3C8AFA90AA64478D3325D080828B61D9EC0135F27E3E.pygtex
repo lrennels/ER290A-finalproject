@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{using} \PYG{n}{Weave}
+\PYG{n}{include}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}helper\PYGZus{}functions.jl\PYGZdq{}}\PYG{p}{)}
+\end{Verbatim}
