@@ -22,10 +22,12 @@ day_df <- aggregate(CFS ~ Day, df, mean) %>% set_colnames(c("Date", "CFS"))
 day_df$CMS <- day_df$CFS*0.028316847
 day_df$CFS <- NULL
 
+#day_df <- read.csv("NYuba_Inflow_Day.csv", check.names = F)
+#day_df$Date <- date_fix(day_df$Date)
 month_df <- day_df %>% mutate(ymd = paste(month(Date),"01",year(Date),sep = "/"))
 month_df$ymd <- date_fix(month_df$ymd)
 month_df <- aggregate(CMS ~ ymd, month_df, mean) %>% set_colnames(c("Date", "CMS"))
-
+#month_df$CMS <- month_df$CMS*0.7
 write.csv(day_df, file = "NYuba_Inflow_Day.csv", row.names = F)
 write.csv(month_df, file = "NYuba_Inflow_Month.csv", row.names = F)
 ```

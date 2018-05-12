@@ -40,9 +40,9 @@ push!(demand_nodes, create_demand_node(
     demand_type = "hydropower", 
     name = "hydropower: ERG", 
     size = 1., 
-    rate =  0 * 10e7 * [0., 0. , 0., 0., 0., 13., 13., 12., 11., 10., 9., 9.], 
+    rate =  3*10e7 * [2., 2., 3., 5., 7., 8., 10., 8.5, 6., 4., 2.5, 2.], 
     size_units = "NA", 
-    demand_units = "MWH", 
+    demand_units = "MM3", 
     priority = 2,
     Loc = 3)
 )
@@ -55,9 +55,9 @@ push!(demand_nodes, create_demand_node(
     demand_type = "IFR", 
     name = "IFS: Trout", 
     size = 1., 
-    rate = fill(0.5, 12), 
+    rate = 1e9*fill(1, 12), 
     size_units = "NA", 
-    demand_units = "CMS", 
+    demand_units = "MM3", 
     priority = 1, 
     Loc = 4)
 )

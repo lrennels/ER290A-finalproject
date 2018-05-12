@@ -63,15 +63,16 @@ end
 
 ###----------------------- PLOTTING FUNCTIONS ------------------------###
 # Supply Plot (supply_nodes)
-splot = function(s_df)
-    s_df |> vl"""
+splot = function(sup,year1,year2)
+    sup2 = deepcopy(sup[(Dates.year(sup[:Date]).>=year1)&(Dates.year(sup[:Date]).<=year2),:])
+    sup2 |> vl"""
     {
         "title": "Streamflow",
         "mark": "area",
         "background": "white",
         "encoding": {
             "x": {"field": "Date","type": "temporal"},
-            "y": {"field": "CMS","type": "Quantitative"},
+            "y": {"field": "Quantity","type": "Quantitative"},
             "color": {"field": "Name", "type": "nominal"},
             "opacity":{"value": 0.8}
         },
@@ -82,30 +83,17 @@ splot = function(s_df)
 end
 
 #Demand Plot (demand_nodes)
-dplot = function()
-    d_demand = deepcopy(demand_nodes[1]["rate"] * demand_nodes[1]["size"])
-    d_months = deepcopy(demand_nodes[1]["months"])
-    d_name = fill(deepcopy(demand_nodes[1]["name"]), length(d_months));
-
-    dem = DataFrame(Demand_in_MM3 = d_demand, Months = d_months, Node = d_name);
-    if length(demand_nodes) > 1
-        for d = 2:length(demand_nodes)
-            d_demand = deepcopy(demand_nodes[d]["rate"] * demand_nodes[d]["size"])
-            #d_months = deepcopy(demand_nodes[d]["months"])
-            d_name = fill(deepcopy(demand_nodes[d]["name"]), length(d_months));
-            append!(dem, DataFrame(Demand_in_MM3= d_demand, Months = d_months, Node = d_name));
-        end
-    end
-
-    dem |> vl"""
+dplot = function(dem,year1,year2)
+    dem2 = deepcopy(dem[(Dates.year(dem[:Date]).>=year1)&(Dates.year(dem[:Date]).<=year2),:])
+    dem2 |> vl"""
     {
         "title": "Demand",
-        "mark": "bar",
+        "mark": "area",
         "background": "white",
         "encoding": {
-            "x": {"field": "Demand_in_MM3", "type": "quantitative"},
-            "y": {"field":"Months", "type": "ordinal"},
-            "color": {"field": "Node", "type": "nominal"},
+            "x": {"field": "Date", "type": "temporal"},
+            "y": {"field":"Quantity", "type": "Quantitative"},
+            "color": {"field": "Name", "type": "nominal"},
             "opacity":{"value": 0.8}
         },
         "width": 500,
@@ -115,22 +103,17 @@ dplot = function()
 end
 
 # Reservoir Plots
-resinplot = function()
-    res = deepcopy(supply_nodes[1]["storage_capacity"])
-    if length(supply_nodes) > 1
-        for s in 2:length(supply_nodes)
-            append!(sup,supply_nodes[s]["inflow"])
-        end
-    end
-    sup |> vl"""
+rplot = function(res,year1,year2)
+    res2 = deepcopy(res[(Dates.year(res[:Date]).>=year1)&(Dates.year(res[:Date]).<=year2),:])
+    res2 |> vl"""
     {
-        "title": "Streamflow",
+        "title": "Demand",
         "mark": "area",
         "background": "white",
         "encoding": {
-            "x": {"field": "Date","type": "temporal"},
-            "y": {"field": "CMS","type": "Quantitative"},
-            "color": {"field": "ID", "type": "nominal"},
+            "x": {"field": "Date", "type": "temporal"},
+            "y": {"field":"Quantity", "type": "Quantitative"},
+            "color": {"field": "Name", "type": "nominal"},
             "opacity":{"value": 0.8}
         },
         "width": 500,
