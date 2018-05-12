@@ -5,7 +5,7 @@
 ## this with some sort of distance variable for all the nodes, but might be 
 ## unnecesarily complicated for now
 
-function DRIP_deterministic(demand_nodes::Array{}, supply_nodes::Array{}, 
+function DRIP_allocation_routine(demand_nodes::Array{}, supply_nodes::Array{}, 
     reservoir_nodes::Array{}, numyears::Int64)
         
     #get maximum priority number
@@ -34,7 +34,7 @@ function DRIP_deterministic(demand_nodes::Array{}, supply_nodes::Array{},
         #add the monthly supply to the current_supply, assuming the supply is in
         #cubic feet per second
         for node = 1:length(supply_nodes)
-            current_supply += supply_nodes[node]["inflow"][:CFS][s_index] * 60*60*24*modays[m_index]
+            current_supply += supply_nodes[node]["inflow"][:CMS][s_index] * 60*60*24*modays[m_index]
         end
 
         #loop over the demand
@@ -48,12 +48,12 @@ function DRIP_deterministic(demand_nodes::Array{}, supply_nodes::Array{},
             end
 
             #calculate the total demand for this priority set, and get all of the
-            #IDs for the priority set to use later
+            #Locs for the priority set to use later
             total_demand = 0.
-            IDs = []
+            Locs = []
             for node = 1:length(current_set)
                 total_demand += current_set[node]["size"] * current_set[node]["rate"][m_index]
-                push!(IDs, current_set[node]["ID"])
+                push!(Locs, current_set[node]["Loc"])
             end
 
             #if there is enough supply, allocate all of it to these nodes, 
@@ -61,12 +61,12 @@ function DRIP_deterministic(demand_nodes::Array{}, supply_nodes::Array{},
             #care of 100%, and move on
             if current_supply >= total_demand
                 current_supply -= total_demand
-                demand_frac_filled[IDs] = 1
+                demand_frac_filled[Locs] = 1
 
             #if there is not enough supply, allocate it equally between these 
             #nodes, mark these nodes as taken care of x%, and break out of loop
             else
-                demand_frac_filled[IDs] = current_supply / total_demand
+                demand_frac_filled[Locs] = current_supply / total_demand
                 current_supply = 0.
                 
             end

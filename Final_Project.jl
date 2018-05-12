@@ -32,7 +32,7 @@ demand = ddf(demand_nodes, start_year, stop_year)
 
 ####-- DEFINE INFRASTRUCTURE -----------------------------------------------####
 #returns 
-#   - demand_nodes, a list of dictionaries defining the demand nodes
+#   - reservoir_nodes, a list of dictionaries defining the demand nodes
 #   - demand, a dataframe of the supplyinclude("DefineDemand.jl")
 
 include("DefineInfrastructure.jl")
@@ -42,7 +42,8 @@ reservoirs = rdf(reservoir_nodes, start_year, stop_year)
 include("DRIP_allocation_routine.jl")
 #returns 
 #   - results, a vector of demand fractions filled, one per demand node
-results = DRIP_allocation(demand, supply, reservoirs,(stop_year - start_year + 1));
+results = DRIP_allocation_routine(demand_nodes, supply_nodes, reservoir_nodes,
+(stop_year - start_year + 1));
 
 ####-- RUN GRAPHICS---------------------------------------------------------####
 splot(supply)
