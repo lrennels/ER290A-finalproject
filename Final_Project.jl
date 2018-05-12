@@ -33,9 +33,9 @@ reservoirs = rdf(reservoir_nodes, start_year, stop_year)
 ####-- RUN DRIP ------------------------------------------------------------####
 #include("DRIP_allocation_routine.jl")
 
-results = DRIP_allocation(demand, supply, reservoirs,(stop_year - start_year + 1));
+#results = DRIP_allocation(demand, supply, reservoirs,(stop_year - start_year + 1));
 
 ####-- RUN GRAPHICS---------------------------------------------------------####
-splot(supply)
-dplot(demand)
+splot(supply, 1990, 2017)
+dplot(demand, 1990, 1990)
 rplot(reservoirs)
