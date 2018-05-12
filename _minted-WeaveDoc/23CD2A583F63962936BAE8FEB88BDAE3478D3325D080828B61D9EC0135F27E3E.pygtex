@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{include}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}DRIP\PYGZus{}allocation\PYGZus{}routine.jl\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{results} \PYG{o}{=} \PYG{n}{DRIP\PYGZus{}allocation\PYGZus{}routine}\PYG{p}{(}\PYG{n}{demand\PYGZus{}nodes}\PYG{p}{,} \PYG{n}{supply\PYGZus{}nodes}\PYG{p}{,} \PYG{n}{reservoir\PYGZus{}nodes}\PYG{p}{,}
+    \PYG{p}{(}\PYG{n}{stop\PYGZus{}year} \PYG{o}{\PYGZhy{}} \PYG{n}{start\PYGZus{}year} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{))}
+\end{Verbatim}

@@ -80,7 +80,7 @@ by the main DRIP script.*
 You can also graphically view the demand time series using `dplot`
 
 ```{julia; eval=true}
-dplot()
+dplot(demand,1990,1990)
 ```
 
 #### 3. Define Supply 
@@ -116,7 +116,7 @@ by the main DRIP script.*
 You can also graphically view the demand time series using `splot`
 
 ```{julia; eval=true}
-splot()
+splot(supply,1990,2017)
 ```
 
 #### 4. Define Infrastructure
@@ -159,11 +159,28 @@ indicating the fraction of demand fulfilled for that specific demand node.
 
 ```{julia; eval=true}
 include("DRIP_allocation_routine.jl")
-results = DRIP_allocation(demand, supply, reservoirs, 
+results = DRIP_allocation_routine(demand_nodes, supply_nodes, reservoir_nodes, 
     (stop_year - start_year + 1))
+    results
 ```
 
 # III. WEAP Model
+In order to benchmark our model against the original WEAP software, we built a small dummy WEAP model of the system constructed in our model. It consists of a single river with headflow represented as a monthly average streamflow time series taken from the USGS hydrologic gauge data repository for the North Yuba River in the California Sierra Nevada.  There is a single reservoir with a pre-defined storage capacity and initial storage. Currently there is also a single hydropower plant, a city (Berkeley) demand, a farm demand (Anaya's Farm), and a minimum instream flow requirement (IFR). A schema of the model in WEAP is shown below.
+
+![](WEAP_schema1.png)
+
+
+This model was run from 1990 to 2017 at a monthly timestep in order to produce result upon which we want to compare out model outputs. However, given the nascent stage of our model, we were yet unable to totally replicate the WEAP outputs, and are currently thinking through the ways in which WEAP likely obtains its optimzation outputs.
+
+Some data inputs:
+![](WEAP_input1.png)
+
+Here are some results of the reservoir storage and demand shortage:
+Reservoir Shortage
+![](WEAP_results_res.png)
+
+Demand Shortage
+![](WEAP_results_shortage.png)
 
 # IV. Future Work
 

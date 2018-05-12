@@ -1,0 +1,1684 @@
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex 2017.5.23)  11 MAY 2018 19:17
+entering extended mode
+ \write18 enabled.
+ %&-line parsing enabled.
+**WeaveDoc.tex
+(./WeaveDoc.tex
+LaTeX2e <2017-04-15>
+Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count87
+\Gm@cntv=\count88
+\c@Gm@tempcnt=\count89
+\Gm@bindingoffset=\dimen103
+\Gm@wd@mp=\dimen104
+\Gm@odd@mp=\dimen105
+\Gm@even@mp=\dimen106
+\Gm@layoutwidth=\dimen107
+\Gm@layoutheight=\dimen108
+\Gm@layouthoffset=\dimen109
+\Gm@layoutvoffset=\dimen110
+\Gm@dimlist=\toks15
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/lm/lmodern.sty
+Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks16
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/11/05 v2.16a AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks17
+\ex@=\dimen111
+))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen112
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count90
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count91
+\leftroot@=\count92
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count93
+\DOTSCASE@=\count94
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen113
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count95
+\c@MaxMatrixCols=\count96
+\dotsspace@=\muskip10
+\c@parentequation=\count97
+\dspbrk@lvl=\count98
+\tag@help=\toks18
+\row@=\count99
+\column@=\count100
+\maxfields@=\count101
+\andhelp@=\toks19
+\eqnshift@=\dimen114
+\alignsep@=\dimen115
+\tagshift@=\dimen116
+\tagwidth@=\dimen117
+\totwidth@=\dimen118
+\lineht@=\dimen119
+\@envbody=\toks20
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/04/14 v1.1b Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: xetex.def on input line 99.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-def/xetex.def
+File: xetex.def 2016/07/11 v4.10 LaTeX color/graphics driver for XeTeX (L3/RRM/
+JK)
+))
+\Gin@req@height=\dimen120
+\Gin@req@width=\dimen121
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/microtype/microtype.sty
+Package: microtype 2016/05/14 v2.6a Micro-typographical refinements (RS)
+\MT@toks=\toks22
+\MT@count=\count102
+LaTeX Info: Redefining \textls on input line 774.
+\MT@outer@kern=\dimen122
+LaTeX Info: Redefining \textmicrotypecontext on input line 1310.
+\MT@listname@count=\count103
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/microtype/microtype-xetex.def
+File: microtype-xetex.def 2016/05/14 v2.6a Definitions specific to xetex (RS)
+LaTeX Info: Redefining \lsstyle on input line 255.
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/microtype/microtype.cfg
+File: microtype.cfg 2016/05/14 v2.6a microtype main configuration file (RS)
+))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2017/03/14 v6.85a Hypertext links for LaTeX
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package hobsub Info: Skipping package `ifvtex' (already loaded).
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: pdfTeX >= 1.30 not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode not found.
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+)
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+)
+\@linkdim=\dimen123
+\Hy@linkcounter=\count104
+\Hy@pagecounter=\count105
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2017/03/14 v6.85a Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count106
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4498.
+Package hyperref Info: Link nesting OFF on input line 4503.
+Package hyperref Info: Hyper index ON on input line 4506.
+Package hyperref Info: Plain pages OFF on input line 4513.
+Package hyperref Info: Backreferencing OFF on input line 4518.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4751.
+\c@Hy@tempcnt=\count107
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5104.
+\XeTeXLinkMargin=\dimen124
+\Fld@menulength=\count108
+\Field@Width=\dimen125
+\Fld@charsize=\dimen126
+Package hyperref Info: Hyper figures OFF on input line 6358.
+Package hyperref Info: Link nesting OFF on input line 6363.
+Package hyperref Info: Hyper index ON on input line 6366.
+Package hyperref Info: backreferencing OFF on input line 6373.
+Package hyperref Info: Link coloring OFF on input line 6378.
+Package hyperref Info: Link coloring with OCG OFF on input line 6383.
+Package hyperref Info: PDF/A mode OFF on input line 6388.
+LaTeX Info: Redefining \ref on input line 6428.
+LaTeX Info: Redefining \pageref on input line 6432.
+\Hy@abspage=\count109
+\c@Item=\count110
+\c@Hfootnote=\count111
+)
+
+Package hyperref Message: Driver (autodetected): hxetex.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/hxetex.def
+File: hxetex.def 2017/03/14 v6.85a Hyperref driver for XeTeX
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2017/03/14 v6.85a Hyperref: PDF Unicode definition (HO)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/stringenc.sty
+Package: stringenc 2016/05/16 v1.11 Convert strings between diff. encodings (HO
+)
+)
+\pdfm@box=\box28
+\c@Hy@AnnotLevel=\count112
+\HyField@AnnotCount=\count113
+\Fld@listcount=\count114
+\c@bookmark@seq@number=\count115
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+Package rerunfilecheck Info: Feature \pdfmdfivesum is not available
+(rerunfilecheck)             (e.g. pdfTeX or LuaTeX with package `pdftexcmds').
+
+(rerunfilecheck)             Therefore file contents cannot be checked efficien
+tly
+(rerunfilecheck)             and the loading of the package is aborted.
+)
+\Hy@SectionHShift=\skip46
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/minted/minted.sty
+Package: minted 2016/10/31 v2.4.1 Yet another Pygments shim for LaTeX
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/fvextra/fvextra.sty
+Package: fvextra 2016/09/02 v1.2.1 fvextra - extensions and patches for fancyvr
+b
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2017/01/02 v2.4 e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count116
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2008/02/07
+
+Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
+<2008/02/07> (tvz)
+\FV@CodeLineNo=\count117
+\FV@InFile=\read1
+\FV@TabBox=\box29
+\c@FancyVerbLine=\count118
+\FV@StepNumber=\count119
+\FV@OutFile=\write3
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/upquote/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2017/04/05 v2.0i Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+)
+LaTeX Info: Redefining \oldstylenums on input line 334.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 349.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 350.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 351.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 352.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 353.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 354.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 355.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 356.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 357.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 358.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 359.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 360.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 361.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 362.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 363.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 364.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 365.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 366.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 367.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 368.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 369.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 370.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 371.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 372.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 373.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 374.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 375.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 376.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 377.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 378.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 379.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 380.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 381.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 382.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 383.
+Package textcomp Info: Setting lmtt sub-encoding to TS1/0 on input line 384.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 385.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 386.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 387.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 388.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 389.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 390.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 391.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 392.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 393.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 394.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 395.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 396.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 397.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 398.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 399.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 400.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 401.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 402.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 403.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 404.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 405.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
+))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/lineno/lineno.sty
+Package: lineno 2005/11/02 line numbers on paragraphs v4.41
+Invalid UTF-8 byte or sequence at line 296 replaced by U+FFFD.
+\linenopenalty=\count120
+\output=\toks23
+\linenoprevgraf=\count121
+\linenumbersep=\dimen127
+\linenumberwidth=\dimen128
+\c@linenumber=\count122
+\c@pagewiselinenumber=\count123
+\c@LN@truepage=\count124
+\c@internallinenumber=\count125
+\c@internallinenumbers=\count126
+\quotelinenumbersep=\dimen129
+\bframerule=\dimen130
+\bframesep=\dimen131
+\bframebox=\box30
+LaTeX Info: Redefining \\ on input line 3056.
+)
+\c@FV@TrueTabGroupLevel=\count127
+\c@FV@TrueTabCounter=\count128
+\FV@TabBox@Group=\box31
+\FV@TmpLength=\skip47
+\c@FV@HighlightLinesStart=\count129
+\c@FV@HighlightLinesStop=\count130
+\FV@BreakIndent=\dimen132
+\FV@BreakSymbolSepLeft=\dimen133
+\FV@BreakSymbolSepRight=\dimen134
+\FV@BreakSymbolIndentLeft=\dimen135
+\FV@BreakSymbolIndentRight=\dimen136
+\c@FancyVerbLineBreakLast=\count131
+\FV@LineBox=\box32
+\FV@LineIndentBox=\box33
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count132
+\float@exts=\toks24
+\float@box=\box34
+\@float@everytoks=\toks25
+\@floatcapt=\box35
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count133
+\calc@Bcount=\count134
+\calc@Adimen=\dimen137
+\calc@Bdimen=\dimen138
+\calc@Askip=\skip48
+\calc@Bskip=\skip49
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count135
+\calc@Cskip=\skip50
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/shellesc.sty
+Package: shellesc 2016/06/07 v0.02a unified shell escape interface for LaTeX
+Package shellesc Info: Unrestricted shell escape enabled on input line 67.
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+Package: ifplatform 2010/10/22 v0.4 Testing for the operating system
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/catchfile.sty
+Package: catchfile 2016/05/16 v1.7 Catch the contents of a file (HO)
+)
+runsystem(uname -s > "WeaveDoc.w18")...executed.
+
+
+(./WeaveDoc.w18)
+runsystem(rm -- "WeaveDoc.w18")...executed.
+
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/xstring/xstring.sty
+(/usr/local/texlive/2017/texmf-dist/tex/generic/xstring/xstring.tex
+\@xs@message=\write4
+\integerpart=\count136
+\decimalpart=\count137
+)
+Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip51
+\fb@frw=\dimen139
+\fb@frh=\dimen140
+\FrameRule=\dimen141
+\FrameSep=\dimen142
+)
+\minted@appexistsfile=\read2
+\minted@bgbox=\box36
+\minted@code=\write5
+\c@minted@FancyVerbLineTemp=\count138
+\c@minted@pygmentizecounter=\count139
+\@float@every@listing=\toks26
+\c@listing=\count140
+)
+runsystem(mkdir -p _minted-WeaveDoc)...executed.
+
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/se-ascii-print.def
+File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
+
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 32.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: xetex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+runsystem(which pygmentize && touch WeaveDoc.aex)...executed.
+
+runsystem(rm WeaveDoc.aex)...executed.
+
+
+(./WeaveDoc.aux)
+\openout1 = `WeaveDoc.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 55.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 55.
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 55.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+*geometry* verbose mode - [ preamble ] result:
+* driver: xetex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* hratio: 1:1
+* vratio: 1:1
+* modes: 
+* h-part:(L,W,R)=(64.0187pt, 469.47046pt, 64.0187pt)
+* v-part:(T,H,B)=(64.01874pt, 717.00935pt, 64.01875pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=469.47046pt
+* \textheight=717.00935pt
+* \oddsidemargin=-8.25128pt
+* \evensidemargin=-8.25128pt
+* \topmargin=-45.25125pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=35.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Info: Redefining \microtypecontext on input line 55.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of spacing.
+Package microtype Info: No adjustment of kerning.
+(/usr/local/texlive/2017/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
+)
+Package microtype Info: Loading generic settings for font family
+(microtype)             `lmr' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\`A'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'A'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\^A'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\~A'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\"A'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\r A'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\k A'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\u A'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\`a'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'a'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\^a'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\~a'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\"a'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\r a'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\k a'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\u a'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'C'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\c C'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v C'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'c'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\c c'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v c'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v D'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v d'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\`E'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'E'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\^E'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\"E'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\k E'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v E'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\`e'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'e'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\^e'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\"e'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\k e'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v e'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\u G'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\u g'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\`I'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'I'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\^I'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\"I'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\.I'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\`i'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'i'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\^i'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\"i'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'L'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v L'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'l'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v l'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'N'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\~N'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v N'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'n'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\~n'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v n'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\`O'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'O'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\^O'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\~O'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\"O'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\H O'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\`o'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'o'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\^o'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\~o'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\"o'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\H o'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'R'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v R'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'r'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v r'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'S'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\c S'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v S'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'s'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\c s'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v s'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\c T'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v T'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\c t'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v t'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\`U'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'U'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\^U'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\"U'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\H U'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\r U'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\`u'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'u'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\^u'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\"u'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\H u'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\r u'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'Y'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\"Y'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'y'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\"y'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'Z'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\.Z'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v Z'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'z'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\.z'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v z'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+\AtBeginShipoutBox=\box37
+Package hyperref Info: Link coloring ON on input line 55.
+(/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+)
+\c@section@level=\count141
+)
+LaTeX Info: Redefining \ref on input line 55.
+LaTeX Info: Redefining \pageref on input line 55.
+LaTeX Info: Redefining \nameref on input line 55.
+
+(./WeaveDoc.out) (./WeaveDoc.out)
+\@outlinefile=\write6
+\openout6 = `WeaveDoc.out'.
+
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 58.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 58.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 58.
+
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 58.
+
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 58.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 58.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 58.
+LaTeX Font Info:    Try loading font information for U+msa on input line 58.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 58.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+Package microtype Info: Loading generic settings for font family
+(microtype)             `lmtt' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+\openout3 = `WeaveDoc.pyg'.
+
+
+(./_minted-WeaveDoc/default-pyg-prefix.pygstyle)
+(./_minted-WeaveDoc/default.pygstyle)
+(./_minted-WeaveDoc/6B7833CFF981B7D99CEC3C8AFA90AA64478D3325D080828B61D9EC0135F
+27E3E.pygtex
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10.95> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 2.
+)
+\openout3 = `WeaveDoc.pyg'.
+
+
+(./_minted-WeaveDoc/FB904D5FABFD5DCDF533E3BD708B03138DB95E01C234FECEF9E903F9936
+D1A20.pygtex)
+\openout3 = `WeaveDoc.pyg'.
+
+
+(./_minted-WeaveDoc/27467BB5C74AB4235306E02FF20A3173478D3325D080828B61D9EC0135F
+27E3E.pygtex) [1
+
+]
+\openout3 = `WeaveDoc.pyg'.
+
+
+(./_minted-WeaveDoc/0B20413F80896815CFEFFA4350B40E3B478D3325D080828B61D9EC0135F
+27E3E.pygtex)
+\openout3 = `WeaveDoc.pyg'.
+
+
+(./_minted-WeaveDoc/E555E20E6D94B314EBB3233CB27860818DB95E01C234FECEF9E903F9936
+D1A20.pygtex
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no ├ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ┼ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ┼ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ┼ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ┼ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ┼ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ┤ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+)
+\openout3 = `WeaveDoc.pyg'.
+
+runsystem(pygmentize -l julia -f latex -P commandprefix=PYG -F tokenmerge -P ma
+thescape=True -o _minted-WeaveDoc/9C1F825F940652D57F00C870A0BA708C478D3325D0808
+28B61D9EC0135F27E3E.pygtex WeaveDoc.pyg)...executed.
+
+
+(./_minted-WeaveDoc/9C1F825F940652D57F00C870A0BA708C478D3325D080828B61D9EC0135F
+27E3E.pygtex)
+\openout3 = `WeaveDoc.pyg'.
+
+runsystem(pygmentize -l text -f latex -P commandprefix=PYG -F tokenmerge -P mat
+hescape=True -o _minted-WeaveDoc/CF2CF554C2B0AF94AB89A9CC313B545A8DB95E01C234FE
+CEF9E903F9936D1A20.pygtex WeaveDoc.pyg)...executed.
+
+
+(./_minted-WeaveDoc/CF2CF554C2B0AF94AB89A9CC313B545A8DB95E01C234FECEF9E903F9936
+D1A20.pygtex) [2]
+\openout3 = `WeaveDoc.pyg'.
+
+runsystem(pygmentize -l julia -f latex -P commandprefix=PYG -F tokenmerge -P ma
+thescape=True -o _minted-WeaveDoc/755F0AF77F35190D01A913C5DF2D9539478D3325D0808
+28B61D9EC0135F27E3E.pygtex WeaveDoc.pyg)...executed.
+
+
+(./_minted-WeaveDoc/755F0AF77F35190D01A913C5DF2D9539478D3325D080828B61D9EC0135F
+27E3E.pygtex)
+\openout3 = `WeaveDoc.pyg'.
+
+runsystem(pygmentize -l text -f latex -P commandprefix=PYG -F tokenmerge -P mat
+hescape=True -o _minted-WeaveDoc/6F909CB84ADFFEACA5803C61FEDD880E8DB95E01C234FE
+CEF9E903F9936D1A20.pygtex WeaveDoc.pyg)...executed.
+
+
+(./_minted-WeaveDoc/6F909CB84ADFFEACA5803C61FEDD880E8DB95E01C234FECEF9E903F9936
+D1A20.pygtex
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no ├ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ┼ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ┼ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ┼ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ┼ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ┼ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ┤ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+Missing character: There is no │ in font [lmmono10-regular]:!
+)
+\openout3 = `WeaveDoc.pyg'.
+
+runsystem(pygmentize -l julia -f latex -P commandprefix=PYG -F tokenmerge -P ma
+thescape=True -o _minted-WeaveDoc/59F7A6973B3045D7829DA76DAB1C75DF478D3325D0808
+28B61D9EC0135F27E3E.pygtex WeaveDoc.pyg)...executed.
+
+
+(./_minted-WeaveDoc/59F7A6973B3045D7829DA76DAB1C75DF478D3325D080828B61D9EC0135F
+27E3E.pygtex)
+\openout3 = `WeaveDoc.pyg'.
+
+
+(./_minted-WeaveDoc/CF2CF554C2B0AF94AB89A9CC313B545A8DB95E01C234FECEF9E903F9936
+D1A20.pygtex) [3]
+\openout3 = `WeaveDoc.pyg'.
+
+runsystem(pygmentize -l julia -f latex -P commandprefix=PYG -F tokenmerge -P ma
+thescape=True -o _minted-WeaveDoc/C95AA9263F127877ACEAEBDCE640F095478D3325D0808
+28B61D9EC0135F27E3E.pygtex WeaveDoc.pyg)...executed.
+
+
+(./_minted-WeaveDoc/C95AA9263F127877ACEAEBDCE640F095478D3325D080828B61D9EC0135F
+27E3E.pygtex)
+\openout3 = `WeaveDoc.pyg'.
+
+runsystem(pygmentize -l julia -f latex -P commandprefix=PYG -F tokenmerge -P ma
+thescape=True -o _minted-WeaveDoc/23CD2A583F63962936BAE8FEB88BDAE3478D3325D0808
+28B61D9EC0135F27E3E.pygtex WeaveDoc.pyg)...executed.
+
+
+(./_minted-WeaveDoc/23CD2A583F63962936BAE8FEB88BDAE3478D3325D080828B61D9EC0135F
+27E3E.pygtex)
+Overfull \hbox (62.29631pt too wide) in paragraph at lines 287--288
+\TU/lmr/m/n/12 WEAP. A small model of the inner portion of this optimisation ca
+n be found in \TU/lmtt/m/n/12 Excel_Optim_Model.xlsx\TU/lmr/m/n/12 . 
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 291.
+[4]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 291.
+ (./WeaveDoc.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 291.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 291.
+runsystem(rm WeaveDoc.pyg)...executed.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 291.
+ ) 
+Here is how much of TeX's memory you used:
+ 14383 strings out of 493005
+ 226695 string characters out of 6134596
+ 378041 words of memory out of 5000000
+ 18125 multiletter control sequences out of 15000+600000
+ 16369 words of font info for 43 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 38i,6n,45p,938b,402s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on WeaveDoc.pdf (4 pages).
