@@ -23,15 +23,24 @@ push!(supply_nodes, create_supply_node(
 
 # Create Data Frame of All Supply Node Flows
 function sdf(supply_nodes, start_year, stop_year)
-    for s in 1:length(supply_nodes)
-        if (s == 1)
-            out = deepcopy(supply_nodes[1]["inflow"])
-            out[:Name] = supply_nodes[1]["name"]
-            out[:Loc] = supply_nodes[1]["Loc"]
+    dictcopy = deepcopy(supply_nodes)
+    for i in 1:length(dictcopy)
+        if (i == 1)
+            out = DataFrame(
+                Date = dictcopy[i]["inflow"][:Date],
+                Name = dictcopy[i]["name"],
+                Quantity = dictcopy[i]["inflow"][:CMS],
+                Units = dictcopy[i]["supply_units"],
+                Loc = dictcopy[i]["Loc"]
+            )
         else
-            add = deepcopy(supply_nodes[s]["inflow"])
-            add[:Name] = supply_nodes[s]["name"]
-            add[:Loc] = supply_nodes[s]["Loc"]
+            add = DataFrame(
+                Date = dictcopy[i]["inflow"][:Date],
+                Name = dictcopy[i]["name"],
+                Quantity = dictcopy[i]["inflow"][:CMS],
+                Units = dictcopy[i]["supply_units"],
+                Loc = dictcopy[i]["Loc"]
+            )
             append!(out,add)
         end
     end
