@@ -65,22 +65,25 @@ push!(demand_nodes, create_demand_node(
 
 # Create Data Frame of All Demands
 function ddf(demand_nodes, start_year, stop_year)
+    dictcopy = deepcopy(demand_nodes)
     nyears = stop_year - start_year + 1
-    dates = Date.(sort(repmat(years,12)),repmat(1:12,nyears))
+    dates = Date.(sort(repmat(start_year:stop_year,12)),repmat(1:12,nyears))
     out=[]
-    for i in 1:length(demand_nodes)
+    for i in 1:length(dictcopy)
         if (i == 1)
             out = DataFrame(
                 Date = copy(dates), 
-                Name = demand_nodes[i]["name"],
-                Demand = repmat(deepcopy(demand_nodes[i]["rate"]*demand_nodes[i]["size"]),nyears), Units = demand_nodes[i]["demand_units"],
-                Loc = demand_nodes[i]["Loc"])
+                Name = dictcopy[i]["name"],
+                Quantity = repmat(dictcopy[i]["rate"]*dictcopy[i]["size"],nyears), 
+                Units = dictcopy[i]["demand_units"],
+                Loc = dictcopy[i]["Loc"])
         else
             add = DataFrame(
                 Date = copy(dates), 
-                Name = demand_nodes[i]["name"],
-                Demand = repmat(deepcopy(demand_nodes[i]["rate"]*demand_nodes[i]["size"]),nyears), Units = demand_nodes[i]["demand_units"],
-                Loc = demand_nodes[i]["Loc"])
+                Name = dictcopy[i]["name"],
+                Quantity = repmat(dictcopy[i]["rate"]*dictcopy[i]["size"],nyears), 
+                Units = dictcopy[i]["demand_units"],
+                Loc = dictcopy[i]["Loc"])
             out = append!(out,add)
         end
     end

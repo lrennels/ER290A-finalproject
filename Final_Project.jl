@@ -27,13 +27,13 @@ demand = ddf(demand_nodes, start_year, stop_year)
 
 ####-- DEFINE INFRASTRUCTURE -----------------------------------------------####
 include("DefineInfrastructure.jl")
+res_inits = res_init(reservoir_nodes)
 reservoirs = rdf(reservoir_nodes, start_year, stop_year)
 
 ####-- RUN DRIP ------------------------------------------------------------####
-include("DRIP_allocation_routine.jl")
+#include("DRIP_allocation_routine.jl")
 
-results = DRIP_allocation(demand_nodes, supply_nodes, reservoir_nodes, 
-    (stop_year - start_year + 1));
+results = DRIP_allocation(demand, supply, reservoirs,(stop_year - start_year + 1));
 
 ####-- RUN GRAPHICS---------------------------------------------------------####
 splot(supply)

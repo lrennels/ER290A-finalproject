@@ -5,6 +5,14 @@
 
 using Queryverse
 
+function res_init(reservoir_nodes)
+    res_inits = fill(0,length(reservoir_nodes))
+    for r = 1:length(reservoir_nodes)
+        res_inits[r] = reservoir_nodes[r]["init_storage"]
+    end
+    return res_inits
+end
+
 function create_demand_node(;
     demand_type::String = "default_type", 
     name::String = "default_name", 
@@ -29,7 +37,7 @@ function create_supply_node(;
     filepath::String = "filepath", 
     name::String = "default_name", 
     supply_units::String = "supply_units", 
-    Loc::Int64 = 999s)
+    Loc::Int64 = 999)
 
     inflow = DataFrame(load(filepath))
     return Dict("name" => name, "inflow" => inflow, "supply_units" => supply_units, 
@@ -46,7 +54,7 @@ function create_reservoir(;
     init_storage::Float64 = -999.,
     top_of_conservation::Array = fill(-999.,12), 
     storage_units::String = "storage_units", 
-    Loc::Int64 = 999);
+    Loc::Int64 = -999);
 
     return Dict("name" => name, "storage_capacity" => storage_capacity, "init_storage" => init_storage,
     "top_of_conservation" => top_of_conservation, "storage_units" => storage_units, 
