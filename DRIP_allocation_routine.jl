@@ -1,53 +1,64 @@
-## This file defines an allocation algorithm for DRIP, and can be used as a 
-#skeleton as we decide how to include optimization components 
+## This file defines a WIP version of the DRIP allocation routine that involves
+## more complex algorithms and prepares for an optimization step.
 
-## ASSUMPTION 1:  All supply is upstream of all demand - we may want to alter 
-## this with some sort of distance variable for all the nodes, but might be 
-## unnecesarily complicated for now
+## ---------------------------------------------------------------------------##
+## WIP WORK ON OPTIMIZABLE MODEL ---------------------------------------------##
+## ---------------------------------------------------------------------------##
 
+#initialize variables
 res_tm1 = rcopy[:RESULTS_Storage][t-1]
-r_inflow
-r_withd
-r_dem
-r_sup
+inflow = 0
+withd = 0
+dem = 0
+sup = 0
 
+#configure the Excel Optim model into Julia
 for l in 1:length(locs)
-    if(l == 1)
-        inflow = 0
-        withd = 0
-        dem = 0
-        sup = 0
+
+    #configure model for first node
+    if l == 1
+        
         if locs[l] in slocs # If supply node
             if scopy[scopy[:Loc].==locs[l],:][:Units][t] == "CMS"
-                sup = scopy[scopy[:Loc].==locs[l],:][:Quantity][t]*60*60*24*mdays[Dates.month(dates[t])] # convert to MM3
+                sup = scopy[scopy[:Loc].==locs[l],:][:Quantity][t]*60*60*24*mdays
+                [Dates.month(dates[t])] # convert to MM3
             else
                 sup = scopy[scopy[:Loc].==locs[l],:][:Quantity][t]
             end
+
         elseif locs[l] in dlocs # If demand node
             if dcopy[dcopy[:Loc].==locs[l],:][:Units][t] == "CMS"
-                dem = dcopy[dcopy[:Loc].==locs[l],:][:Quantity][t]*60*60*24*mdays[Dates.month(dates[t])] # convert to MM3
+                dem = dcopy[dcopy[:Loc].==locs[l],:][:Quantity][t]*60*60*24*mdays
+                [Dates.month(dates[t])] # convert to MM3
             else
                 dem = dcopy[dcopy[:Loc].==locs[l],:][:Quantity][t]
             end
+
         elseif locs[l] in rlocs # If reservoir node
             if t == 1
                 sup = res_inits[find(rlocs .== locs[l])]
             else
                 sup = rcopy[:RESULTS_Storage][t-1]
-            end
-            
+            end           
         end
-            r_outflow = supply[]
-        end
+        
+    #not in the first location   
+    else
+
     end
 end
 
+#create objective function
 function dem_covg_obj(withdrawal_frac)
 end
 
 # Function to determine how much water reservoir should store/release
 function resbal(t,l)
 end
+
+## ---------------------------------------------------------------------------##
+## ORIGINAL WORK, ENHANCED ----- ---------------------------------------------##
+## ---------------------------------------------------------------------------##
 
 function DRIP_allocation(demand, supply, reservoirs, res_inits, start_year, stop_year, year_ts = 12)
 
@@ -66,11 +77,13 @@ function DRIP_allocation(demand, supply, reservoirs, res_inits, start_year, stop
     nyears = stop_year - start_year + 1
     dates = Date.(sort(repmat(start_year:stop_year,12)),repmat(1:12,nyears))
     lyears = 1800:4:2200
+
     # find all locations of demand, supply, reservoir nodes (1 = furthest upstream)
     locs = sort(unique(vcat(dcopy[:Loc], scopy[:Loc], rcopy[:Loc])))
     slocs = unique(scopy[:Loc])
     dlocs = unique(dcopy[:Loc])
     rlocs = unique(rcopy[:Loc])
+
     # create stream reach flows matrix (reprsents flow at end of reach)
     reach_flow = fill(0.,length(dates),length(locs))
 
