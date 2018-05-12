@@ -14,7 +14,7 @@ push!(demand_nodes, create_demand_node(
     size_units = "people", 
     demand_units = "MM3", 
     priority = 1, 
-    Loc = 4)
+    Loc = 1)
 )
 ###---------------------------###
 
@@ -29,7 +29,7 @@ push!(demand_nodes, create_demand_node(
     size_units = "km2", 
     demand_units = "MM3", 
     priority = 1, 
-    Loc = 5)
+    Loc = 2)
 )
 ###---------------------------###
 
@@ -59,7 +59,7 @@ push!(demand_nodes, create_demand_node(
     size_units = "NA", 
     demand_units = "CMS", 
     priority = 1, 
-    Loc = 8)
+    Loc = 4)
 )
 ###---------------------------###
 

@@ -17,7 +17,7 @@ push!(supply_nodes, create_supply_node(
     filepath = "NYuba_Inflow_Month2.csv", 
     name = "Tributary 1", 
     supply_units = "CMS", 
-    Loc = 3)
+    Loc = 2)
 )
 ###---------------------------###
 

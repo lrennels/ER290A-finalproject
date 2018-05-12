@@ -4,7 +4,7 @@ author : Lisa Rennels and Nick Depsky
 date : 11th May 2018
 ---
 
-# Intro
+# I. Intro
 
 DRIP is a water resource allocation tool, modeled after [WEAP](http://weap21.org)
 from the [Stockholm Environment Institute's U.S. Center](https://www.sei.org/centres/us/).
@@ -21,11 +21,13 @@ incorporate these issues into a practical yet robust tool for integrated water
 resources planning. WEAP is developed by the Stockholm Environment Institute's 
 U.S. Center.*
 
-The source code is available on [GitHub](https://github.com/lrennels/ER290A-finalproject) 
+The source code for DRIP is available on [GitHub](https://github.com/lrennels/ER290A-finalproject) 
 and includes several script files as well as input data files to run a small
-example.
+example.  In addition to the modeling in Julia, we created a small model in 
+`WEAP` for testing purposes.  The required software is proprietary, so it is not 
+included in Github.
 
-# User Guide and Example
+# II. User Guide and Example
 
 #### 1. Setup
 
@@ -63,19 +65,23 @@ requirements including
 - Loc- location (or position) in list of all nodes (*Int64*)
 
 Once all demand nodes are defined, you can create the structures with an 
-`include` statement, convert them to a DataFrame structure using the `rdf`
-function, and view graphically using `dplot` as follows:
-
+`include` statement and convert them to a DataFrame structure using the `rdf`
+function as follows:
 
 ```{julia; eval=true}
 include("DefineDemand.jl")
 demand = ddf(demand_nodes, start_year, stop_year)
-dplot()
+head(demand)
 ```
-
 *The `include` call will return a list of dictionaries, one for each node, 
 and the `rdf` call will convert this data structure into a `DataFrame` for use
 by the main DRIP script.*
+
+You can also graphically view the demand time series using `dplot`
+
+```{julia; eval=true}
+dplot()
+```
 
 #### 3. Define Supply 
 
@@ -95,18 +101,23 @@ in the second column.  Example files can be found in this folder eg.
 *NYuba_Inflow_Month*.
 
 Once all supply nodes are defined, you can create the structures with an 
-`include` statement, convert them to a DataFrame structure using the `rdf`
-function, and view graphically using `splot` as follows:
+`include` statement and convert them to a DataFrame structure using the `rdf`
+function as follows:
 
 ```{julia; eval=true}
 include("DefineSupply.jl")
 supply = sdf(supply_nodes, start_year, stop_year)
+head(supply)
+```
+*The `include` call will return a list of dictionaries, one for each node, 
+and the `sdf` call will convert this data structure into a `DataFrame` for use
+by the main DRIP script.*
+
+You can also graphically view the demand time series using `splot`
+
+```{julia; eval=true}
 splot()
 ```
-
-*The `include` call will return a list of dictionaries, one for each node, 
-and the `rdf` call will convert this data structure into a `DataFrame` for use
-by the main DRIP script.*
 
 #### 4. Define Infrastructure
 
@@ -126,14 +137,13 @@ format of month (Date format) in the first column and Supply (number format)
 in the second column.  Example files can be found in this folder eg. 
 *NYuba_Inflow_Month*.
 
-Once all reservoir nodes are defined, you can create the structures with an 
-`include` statement, convert them to a DataFrame structure using the `rdf`
-function, and view graphically using `rplot` as follows:
+Once all supply nodes are defined, you can create the structures with an 
+`include` statement and convert them to a DataFrame structure using the `rdf`
+function as follows:
 
 ```{julia; eval=true}
 include("DefineInfrastructure.jl")
-reservoirs = rdf(reservoir_nodes, start_year, stop_year);
-rplot(reservoirs)
+reservoirs = rdf(reservoir_nodes, start_year, stop_year)
 ```
 
 *The `include` call will return a list of dictionaries, one for each node, 
@@ -144,19 +154,21 @@ by the main DRIP script.*
 
 Once you have set up the demand, supply, and reservoir nodes, you can run the
 main DRIP allocation routine!  This allocation script will run the allocation
-algorithm and return `results`, which is ... 
+algorithm and return `results`, which is a vector of values between 0 and 1 
+indicating the fraction of demand fulfilled for that specific demand node. 
 
 ```{julia; eval=true}
 include("DRIP_allocation_routine.jl")
 results = DRIP_allocation(demand, supply, reservoirs, 
-    (stop_year - start_year + 1));
+    (stop_year - start_year + 1))
 ```
 
-# Comparison to WEAP
+# III. WEAP Model
 
-# Future Work
+# IV. Future Work
 
-We hope to improve this work in the future with various enhancements such as:
-
-- include more complex optimization routines
-- add the possibility of shocks as opposed to determistic supply/demand, to more realistically represent weather variability, unexpected shifts in demand, etc.
+Nick and I are interested in expanding upon this work, and have begun to do so 
+in the `DRIP_allocation_routine_WIP.jl` file.  The most significant changes will
+be to the the allocation algorithms, and include an optimisation component that 
+mirrors the one used in WEAP.  A small model of the inner portion of this 
+optimisation can be found in `Excel_Optim_Model.xlsx`.

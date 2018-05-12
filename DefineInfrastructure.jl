@@ -10,12 +10,9 @@ push!(reservoir_nodes, create_reservoir(
     init_storage = 250.,
     top_of_conservation = [400.,400.,400.,400.,400.,400.,400.,400.,400.,400.,400.,400.], 
     storage_units = "MM3",
-    Loc = 2)
+    Loc = 1)
 )
 ###---------------------------###
-
-
-
 
 # Create Data Frame of All Reservoirs
 function rdf(reservoir_nodes, start_year, stop_year)
